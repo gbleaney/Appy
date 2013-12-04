@@ -1,0 +1,113 @@
+
+<div class="page-header row-fluid createRow">
+  <div style="text-align: center">
+
+    <form class = "saveAppyPanel" ng-model="saveAppyForm" ng-submit="saveAppy()">
+
+        <input type="text" name="appyName" ng-model="appy.appy.name" placeholder = "Name" required>  
+        
+        <textarea name="appyDescription" ng-model="appy.appy.description" placeholder = "Description">
+
+        </textarea>
+
+        <input class="pull-right btn flat btn-large btn-success" type="submit" value="{{savingText}}" ng-disabled="saving">
+
+    </form>
+  </div>
+</div>
+
+<div class="row-fluid createRow">
+
+  <div class="span2 sideBar" >
+    <img src="/static/images/loading.gif" ng-show="devicesLoading"></img>
+
+    <ul ng-repeat="device in devices | filter:query | orderBy:orderProp" class="draggableDeviceWrapper">
+      <li  class="draggableDevice flat" data-id="{{device.id}}" draggable>
+        {{device.baseDevice.name}}
+      </li>
+    </ul>
+  </div>
+
+  <div class="span5 inputDevices well" droppable>
+
+    <h3> 
+      Input
+    </h3>
+
+    <div class="droppedDevice" ng-repeat="device in appy.appyDevices" ng-show="device.inputs">
+
+      <div class = 'block'>
+        <h3 class = 'inline'>
+          {{device.device.baseDevice.name}}
+        </h3>
+
+        <button class="btn btn-small flat pull-right" ng-click="removeDevice($index, true)">
+          Remove
+        </button>
+      </div>
+
+
+      <div class="actionList squishedContainer" ng-repeat="input in device.inputs">
+        <select class="pull-left inputAction" ng-model="input.value" ng-options="action as action.name for action in device.device.baseDevice.inputs">
+          <option value="">
+            Select Action
+          </option>
+        </select>
+  <!--
+  <select class="pull-left inputAction">
+          <option value = "" >
+            Select Action
+          </option>
+          <option ng-repeat="action in device.device.baseDevice.inputs" ng-selected="action.id==input.id" value="{{action.id}}" >
+            {{action.name}}
+          </option>
+        </select>
+      -->
+
+        <a class = 'add btn btn-small flat' ng-click="addAction(device.inputs)">
+          +
+        </a>
+        <a class = 'btn delete btn-small flat' ng-click="removeAction(device.inputs, $index)">
+          x
+        </a>
+      </div>
+    </div>
+
+  </div>
+  <div class="span5 outputDevices well" droppable>
+
+    <h3> 
+      Output
+    </h3>
+
+    <div class="droppedDevice" ng-repeat="device in appy.appyDevices" ng-show="device.outputs">
+
+      <div class = 'block'>
+        <h3 class = 'inline'>
+          {{device.device.baseDevice.name}}
+        </h3>
+
+        <button class="inline btn btn-small flat pull-right" ng-click="removeDevice( $index, false )">
+          Remove
+        </button>
+      </div>
+      
+
+      <div class="actionList squishedContainer" ng-repeat="output in device.outputs">
+        <select class="pull-left outpputAction" ng-model="output.value" ng-options="action as action.name for action in device.device.baseDevice.outputs">
+          <option value="">
+            Select Action
+          </option>
+        </select>
+
+        <a class = 'add btn btn-small flat' ng-click="addAction(device.outputs)">
+          +
+        </a>
+        <a class = 'btn delete btn-small flat' ng-click="removeAction(device.outputs, $index)">
+          x
+        </a>
+
+      </div>
+    </div>
+  </div>
+</div>

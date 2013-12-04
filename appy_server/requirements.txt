@@ -1,0 +1,6 @@
+django==1.5.1
+django-admin-bootstrapped
+south==0.8.1
+wadofstuff-django-serializers==1.1.0
+dj-database-url
+djangorestframework

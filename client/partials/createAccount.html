@@ -1,0 +1,19 @@
+<div  class="row-fluid">
+
+	<h1 class = 'page-header'> Create Account </h1>
+
+	<form class = 'createAccountForm' name="createAccountForm" ng-submit="submit()">
+		<input type="text" name="username" ng-model="username" placeholder = 'Username' required/>
+		<br>
+		<input type="email" name="email" ng-model="email" placeholder = 'Email' required/>
+		<br>
+		<input type="password" name="password" ng-model="password" placeholder = 'Password' required/>
+		<br>
+		<input type="password" name="repeatPassword" id="repeatPassword" placeholder="Retype Password" ng-model="repeatPassword" repeat-password="password"  required>
+		<span class="text-error" ng-show="createAccountForm.repeatPassword.$dirty && createAccountForm.repeatPassword.$error.dontMatch">Passwords don't match!</span>
+
+		<br>
+		<input class = 'btn' type="submit" ng-disabled="createAccountForm.$invalid" value = 'Create Account'>
+	</form>
+
+</div>

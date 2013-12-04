@@ -1,0 +1,20 @@
+<div  class="row-fluid">
+
+	<h1 class = 'page-header'> Login </h1>
+
+	<form class = 'span3 userForm' name="loginForm" ng-submit="submit()" ng-controller="LoginFormCtrl">
+
+		<input type="text" name="username" ng-model="username" placeholder = 'Username'/>
+
+		<input type="password" name="password" ng-model="password" placeholder = 'Password'/>
+		<div class = 'block'>
+
+			<input class = 'btn flat btn-primary' type="submit" value = 'Login'>
+		
+			<a class = 'pull-right' href="#/users/create">Create Account</a>
+
+		</div>
+
+	</form>
+
+</div>

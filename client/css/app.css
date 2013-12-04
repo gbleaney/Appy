@@ -1,0 +1,177 @@
+/*
+  HEADER STYLING
+*/
+
+.brand h3 {
+  margin: 0;
+  padding: 0;
+  line-height: 15px;
+}
+
+.header {
+  min-height: 50px;
+}
+
+/*
+  END HEADER STYLING
+*/
+
+
+/*
+  SIGNUP PAGE STYLING
+*/
+
+.userForm {
+  background: #FAFAFA;
+  border: 1px solid #DDD;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.userForm input [type='text']{
+  width: 200px;
+}
+
+
+/*
+  END SIGNUP PAGE STYLING
+*/
+
+
+/*
+  CREATE PAGE STYLING
+*/
+
+.saveAppyPanel textarea {
+  margin-left: 5%;
+  width: 50%;
+  max-width: 60%;
+}
+
+.saveAppyPanel > textarea, 
+.saveAppyPanel > input[type="text"] {
+  border-color: #FFFFFF;
+  color: #000;
+  height: 2em;
+}
+
+.saveAppyPanel > textarea:hover, 
+.saveAppyPanel > input[type="text"]:hover{
+  border: 2px solid #DCE4EC;
+}
+
+.saveAppyPanel > textarea.ng-valid:focus , 
+.saveAppyPanel > input[type="text"].ng-valid:focus {
+  border: 2px solid #1ABC9C!important;
+}
+
+.saveAppyPanel > input[type="text"] {
+  font-weight: bold;
+  font-size: 2em;
+
+}
+.squishedContainer{
+  overflow: hidden;
+  text-align: center;
+}
+
+.saveAppyPanel > * {
+  float: left;
+}
+
+.sideBar{
+  min-height: 300px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px;
+
+}
+
+.draggableDeviceWrapper{
+  padding:0;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.draggableDevice {
+  background-color: #357;
+  padding: 5px;
+  color: #FFFFFF;
+}
+
+
+.droppable-hover {
+  background: #EEE !important;
+}
+
+.ui-draggable-dragging {
+  list-style: none;
+  background: #942!important;
+}
+.inputDevices, .outputDevices {
+  width: 35%;
+  display: inline-block;
+  min-height: 300px!important;
+  border: 1px solid #DDDDDD;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.droppedDevice{
+  border: 1px solid #DDDDDD;
+  border-radius: 4px 0 4px 0;
+  margin: 10px;
+  padding: 10px;
+  background: #FFF;
+}
+
+.search{
+  float: left;
+}
+
+.createRow{
+  margin-top: 20px;
+  width: 100%;
+}
+
+/*
+  END CREATE PAGE STYLING
+*/
+
+
+.inline {
+  display: inline-block;
+}
+
+.block{
+  display: block!important;
+}
+
+.flat {
+  border-radius: 0!important;
+}
+
+.add {
+  padding: 5px;
+  margin-right: 5px;
+  background: #EEE;
+  color: #357;
+}
+
+.add:hover {
+  text-decoration: none;
+  cursor: pointer;
+  background: #333;
+}
+
+.delete {
+  padding: 5px;
+  background: #EEE;
+  color: #357;
+}
+
+.delete:hover {
+  text-decoration: none;
+  cursor: pointer;
+  background: #333;
+}

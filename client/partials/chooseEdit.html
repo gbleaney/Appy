@@ -1,0 +1,19 @@
+<div class="row-fluid" ng-controller="EditCtrl">
+	<h1 class = 'page-header'>
+		Edit
+	</h1>
+	<div>
+		<img src="/static/images/loading.gif" ng-show="appysLoading"></img>
+		<div ng-repeat="appy in appys">
+			<b>
+				{{appy.name}}:
+			</b>
+			<a class="btn btn-primary" href="#/edit/{{appy.id}}">
+				Edit 
+			</a>
+			<button class="btn btn-danger" ng-click="deleteAppy(appy, $index)">
+	            Delete
+	        </button>
+		</div>
+	</div>	
+</div>
